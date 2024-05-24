@@ -28,6 +28,8 @@ function sendMessage(event) {
   if (event.keyCode === 13) {
     var elem = event.target;
     var message = elem.value.trim();
+    var typing = document.getElementById('typing')
+    typing.style.display = "block"
     if (message !== "") {
       chatMsg.innerHTML += `<div class='text-end'><div class="user-message d-inline-block">${message}</div></div>`;
       scrollToBottom();
@@ -40,11 +42,13 @@ function sendMessage(event) {
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>Hello<div></div>";
-          scrollToBottom();
-        }, 2000);
-        setTimeout(function () {
-          chatMsg.innerHTML +=
+            typing.style.display = "none"
+            scrollToBottom();
+          }, 2000);
+          setTimeout(function () {
+            chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>Assalamalaikum! Dear User: How Are You?</div></div>";
+            typing.style.display = "none"
           scrollToBottom();
         }, 4000);
       } else if (
@@ -66,11 +70,15 @@ function sendMessage(event) {
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>Sounds Good</div></div>";
+            typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>How may I help you sir</div></div>";
+            typing.style.display = "none"
+
           scrollToBottom();
         }, 4000);
       } else if (
@@ -85,6 +93,8 @@ function sendMessage(event) {
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>Alhamdullilah</div></div>";
+            typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       } else if (
@@ -95,7 +105,9 @@ function sendMessage(event) {
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>you can write (Web & App Course, Web 3.0 Course, AI Course, Designing Course)</div></div>";
-          scrollToBottom();
+            typing.style.display = "none"
+
+            scrollToBottom();
         }, 2000);
       } else if (
         [
@@ -136,6 +148,8 @@ function sendMessage(event) {
                     Explore TypeScript to write safer and more manageable code.
                     Master React, a popular JavaScript library for building user interfaces.</li>
                     </div>`;
+                    typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       } else if (
@@ -177,6 +191,8 @@ function sendMessage(event) {
                     Learn about accessibility and how to create inclusive designs.
                     Study case studies of successful UI/UX projects to understand best practices and design strategies.</li>
                     </div>`;
+                    typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       } else if (
@@ -215,6 +231,8 @@ function sendMessage(event) {
                     Learn about DApp architecture and how to interact with smart contracts.
                     Explore popular DApp development frameworks and tools.</li>
                     </div>`;
+                    typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       } else if (
@@ -249,12 +267,16 @@ function sendMessage(event) {
                     Learn about techniques for processing and analyzing human language, such as tokenization, stemming, and lemmatization.
                     Study advanced topics like sentiment analysis, machine translation, and chatbots.</li>
                     </div>`;
+                    typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       } else {
         setTimeout(function () {
           chatMsg.innerHTML +=
             "<div><div class='bot-message d-inline-block'>Sorry, I don't understand this!</div></div>";
+            typing.style.display = "none"
+
           scrollToBottom();
         }, 2000);
       }
