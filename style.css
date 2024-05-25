@@ -7,7 +7,7 @@
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("images/back2.jpg");
+  background: url("images/back2.png");
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,6 +107,7 @@ body {
   margin-right: 10px;
   background-color: #fafafa;
 }
+
 
 .chat-input button {
   width: 70px;
